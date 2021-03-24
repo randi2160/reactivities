@@ -1,4 +1,4 @@
-import React ,{Fragment, useEffect, useState}from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import axios from 'axios';
 import 'semantic-ui-css/semantic.min.css';
 import { Container } from 'semantic-ui-react';
@@ -46,8 +46,7 @@ function App() {
  }
  
  function handleDeleteActivity(id?: string){
-  setActivities ([...activities.filter(x => x.id !=id)])
-
+  setActivities ([...activities.filter(x => x.id !==id)])
  }
  
   return (
