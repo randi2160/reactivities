@@ -5,8 +5,6 @@ using Application.Activities;
 using Domain;
 
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using persistence;
 
 namespace API.Controllers
 {
