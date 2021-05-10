@@ -14,7 +14,7 @@ namespace persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.4");
+                .HasAnnotation("ProductVersion", "5.0.5");
 
             modelBuilder.Entity("Domain.Activity", b =>
                 {
@@ -43,6 +43,29 @@ namespace persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Activities");
+                });
+
+            modelBuilder.Entity("Domain.MethodAvailability", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MethodName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Syntax")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Usage")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ListOfFixtureMethods");
                 });
 #pragma warning restore 612, 618
         }

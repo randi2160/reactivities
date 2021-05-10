@@ -12,7 +12,20 @@ namespace persistence
         public static async Task SeedData(DataContext context)
         {
             if (context.Activities.Any()) return;
-            
+            var methods = new List<MethodAvailability>
+            {
+                new MethodAvailability
+                {
+                    MethodName="SwapDirectory",
+                    Description ="This method will allow you to Swap Directory",
+                    Syntax ="!|SwapDirectory|",
+                    Usage =""
+                }
+
+            };
+            await context.ListOfFixtureMethods.AddRangeAsync(methods);
+            await context.SaveChangesAsync();
+
             var activities = new List<Activity>
             {
                 new Activity

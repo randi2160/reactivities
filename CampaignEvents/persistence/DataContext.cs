@@ -10,6 +10,7 @@ namespace persistence
         }
 
         public DbSet<Activity>Activities {get;set;}
+        public DbSet<MethodAvailability> ListOfFixtureMethods { get; set; }
 
     }
 }

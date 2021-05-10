@@ -1,5 +1,6 @@
 using Application.Activities;
 using Application.Core;
+using Application.FixtureMethods;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -30,7 +31,7 @@ namespace API.Extentions
                 });
 
             });
-            services.AddMediatR(typeof(List.Handler).Assembly);
+            services.AddMediatR(typeof(ListFixtureMethods.Handler).Assembly);
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
             return services;
         }
