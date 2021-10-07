@@ -23,3 +23,15 @@ body {
   color: rgba(0, 0, 0, 0.5);
   border-color: transparent;
 }
+
+
+.pb-5, .py-5 {
+    padding-bottom: 3rem !important;
+}
+.pt-5, .py-5 {
+    padding-top: 3rem !important;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.5rem;
+}
